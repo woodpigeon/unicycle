@@ -7,7 +7,7 @@ require 'will_paginate/collection'
 require 'will_paginate/view_helpers'
 require 'haml'
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://unicodes.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:unicodes.db")
 
 
 class Character
@@ -45,7 +45,10 @@ class Character
   
 end
 
-#helpers Pagination::Helpers
+get '/' do
+  "ok"
+end
+
 
 get '/characters' do
   @term = params[:term] || ''
