@@ -8,8 +8,8 @@ require 'will_paginate/collection'
 require 'will_paginate/view_helpers'
 require 'haml'
 
-#DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:unicodes.db")
-DataMapper.setup(:default, ENV['DATABASE_URL'] || 'mysql://localhost/unicodes')
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:unicodes.db")
+#DataMapper.setup(:default, ENV['DATABASE_URL'] || 'mysql://localhost/unicodes')
 
 class Character
   include DataMapper::Resource
