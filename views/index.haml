@@ -1,0 +1,18 @@
+= will_paginate @characters 
+
+%form{:method => :get}
+  %label{:for => 'term'}
+  %input{:type => 'text', :name => 'term', :value => @term}
+  %input{:type => 'submit'}
+  
+%p= @character_count
+
+%ul
+  -@characters.each do |c|
+    %li
+      %div.code= c.code
+      %div.hex= c.hex
+      %div.ref= c.ref 
+      %div.description= c.description
+     
+    

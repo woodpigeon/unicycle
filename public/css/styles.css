@@ -1,0 +1,40 @@
+
+body {
+	font-family:sans-serif;
+	margin:20px;
+	color: black;
+}
+
+a {			
+	color: black;
+}
+
+ul li {
+	list-style-type: none;
+	clear: both;
+}
+ul li div {
+	float: left;
+	line-height:40px;
+	padding: 3px;
+	margin: 3px;
+	text-align: center;
+}
+
+div.code {
+	font-size:30px;
+	font-weight: bold;
+	width: 40px;
+	background-color: palegoldenrod;
+}
+
+div.hex {
+	background-color: orange;
+	width:80px;
+	
+}
+
+div.ref {
+	background-color: lightblue;
+	width:60px;
+}
