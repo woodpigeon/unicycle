@@ -5,8 +5,10 @@ require "data_mapper"
 require 'will_paginate'
 require 'will_paginate/collection'
 require 'will_paginate/view_helpers'
+require 'haml'
 
-DataMapper.setup(:default, "sqlite3:unicodes.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/unicodes.db")
+
 
 class Character
   include DataMapper::Resource
