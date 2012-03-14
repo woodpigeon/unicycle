@@ -7,7 +7,7 @@ require 'will_paginate/collection'
 require 'will_paginate/view_helpers'
 require 'haml'
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/unicodes.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://unicodes.db")
 
 
 class Character
