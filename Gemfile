@@ -7,8 +7,8 @@ gem 'will_paginate'
 gem 'data_mapper'
 gem 'haml'
 gem 'json'
-gem 'heroku'
 gem 'dm-mysql-adapter'
+gem 'brightbox'
 
 group :production do
     gem "pg"
