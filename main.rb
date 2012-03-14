@@ -2,13 +2,14 @@ require "rubygems"
 require "sinatra"
 require "json"
 require "data_mapper"
+require  'dm-migrations'
 require 'will_paginate'
 require 'will_paginate/collection'
 require 'will_paginate/view_helpers'
 require 'haml'
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:unicodes.db")
-
+#DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:unicodes.db")
+DataMapper.setup(:default, 'mysql://localhost/unicodes')
 
 class Character
   include DataMapper::Resource
@@ -44,6 +45,9 @@ class Character
   end
   
 end
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
 
 get '/' do
   "ok"
