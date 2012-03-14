@@ -2,7 +2,7 @@ require "rubygems"
 require "sinatra"
 require "json"
 require "data_mapper"
-require  'dm-migrations'
+require 'dm-migrations'
 require 'will_paginate'
 require 'will_paginate/collection'
 require 'will_paginate/view_helpers'

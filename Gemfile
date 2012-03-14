@@ -8,7 +8,7 @@ gem 'data_mapper'
 gem 'haml'
 gem 'json'
 gem 'heroku'
-
+gem 'dm-mysql-adapter'
 
 group :production do
     gem "pg"
@@ -19,6 +19,5 @@ group :development, :test do
     #gem "sqlite3"
     #gem 'sqlite3-ruby', :require => 'sqlite3'
     #gem "dm-sqlite-adapter"
-    gem 'dm-mysql-adapter'
     gem 'dm-migrations'
 end
