@@ -1,5 +1,6 @@
 source :gemcutter
 
+gem 'rake'
 gem 'foreman'
 gem 'sinatra'
 gem 'thin'
