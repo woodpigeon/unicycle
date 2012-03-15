@@ -61,7 +61,7 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 get '/' do
-  "ok"
+  "ok - just a test ;-)"
 end
 
 
@@ -77,16 +77,24 @@ end
 
 get '/characters.json' do
   @term = params[:term] || ''
-    @characters = Character.paginated_search(params, @term)
-    puts "#{@characters.inspect}"
-    content_type :json
-    pagination = Pagination.new(:next_page => @characters.next_page, 
-                                :previous_page =>  @characters.next_page, 
-                                :current_page =>  @characters.current_page, 
-                                :offset => @characters.offset,
-                                :total_entries =>  @characters.total_entries,
-                                :total_pages => @characters.total_pages)
-    
-    {:characters => @characters, :pagination => pagination}.to_json
+  @characters = Character.paginated_search(params, @term)
+  puts "#{@characters.inspect}"
+  content_type :json
+  pagination = Pagination.new(:next_page => url_for_page(@characters.next_page, @term), 
+                              :previous_page => url_for_page(@characters.previous_page, @term),
+                              :current_page =>  url_for_page(@characters.current_page, @term),
+                              :offset => @characters.offset,
+                              :total_entries =>  @characters.total_entries,
+                              :total_pages => @characters.total_pages)
+  
+  {:characters => @characters, :pagination => pagination}.to_json
 
+end
+
+def url_for_page(page, term)
+  if page.nil?
+    return ''
+  else
+    return "http://#{request.host_with_port}#{request.path_info}?page=#{page}&term=#{term}"
+  end
 end
