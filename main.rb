@@ -68,27 +68,26 @@ end
 get '/characters' do
   @term = params[:term] || ''
   @characters = Character.paginated_search(params, @term)
-  
-  # render /views/index.haml
   haml :index, :format => :html5
-  
 end
 
 
 get '/characters.json' do
   @term = params[:term] || ''
   @characters = Character.paginated_search(params, @term)
-  puts "#{@characters.inspect}"
-  content_type :json
   pagination = Pagination.new(:next_page => url_for_page(@characters.next_page, @term), 
                               :previous_page => url_for_page(@characters.previous_page, @term),
                               :current_page =>  url_for_page(@characters.current_page, @term),
                               :offset => @characters.offset,
                               :total_entries =>  @characters.total_entries,
                               :total_pages => @characters.total_pages)
-  
+  content_type :json
   {:characters => @characters, :pagination => pagination}.to_json
 
+end
+
+get '/webapp' do
+  haml :webapp, :format => :html5
 end
 
 def url_for_page(page, term)
