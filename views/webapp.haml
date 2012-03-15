@@ -1,0 +1,21 @@
+%script{:src=> 'js/webapp.js'}
+
+%form#myform{:method => :get}
+  %label{:for => 'term'}
+  %input#term{:type => 'text', :name => 'term', :value => @term}
+  %input{:type => 'submit'}
+
+%h3 TODO - add pagination by looking at the returned pagination object in the json
+
+%ul#chars
+
+<script id="chars_template" type="text/x-handlebars-template">
+<li>
+<div class='code'>{{code}}</div>
+<div class='hex'>{{hex}}</div>
+<div class='ref'>{{ref}}</div>
+<div class='description'>{{description}}</div>
+<p>{{code}}</p>
+</a>
+</li>
+</script>
