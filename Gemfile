@@ -1,5 +1,6 @@
 source :gemcutter
 
+gem 'active_attr'
 gem 'rake'
 gem 'foreman'
 gem 'sinatra'
