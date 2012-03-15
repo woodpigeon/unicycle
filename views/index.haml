@@ -10,8 +10,9 @@
 %ul
   -@characters.each do |c|
     %li
-      %div.code= c.code
-      %div.hex= c.hex
-      %div.ref= c.ref 
-      %div.description= c.description
+      %dl
+        %dt.description= c.description
+        %dd.code= c.code
+        %dd.hex= c.hex
+        %dd.ref= c.ref
     

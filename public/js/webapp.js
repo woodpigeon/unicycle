@@ -28,7 +28,7 @@ $(function() {
 	getData('');
 	
 	// wire up the form so not submit but use ajax
-	$("#myform").submit(function(a,b) {
+	$("#search").submit(function(a,b) {
 	
 		getData($("#term").val());
 		return false

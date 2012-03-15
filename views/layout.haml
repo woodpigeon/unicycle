@@ -1,21 +1,38 @@
 %html{:lang=>'en'}
   %head
-    %title Yay!
+    %title Unicycle
     %script{:src=>'/js/jquery-1.7.1.min.js'}
     %script{:src=>'/js/handlebars.js'}
     %link{:rel=>'stylesheet', :href=>'/css/styles.css'}
     
     
   %body
-    #container
-      %header
-        %h1
-          %a{:href=>'/'} Unicycle
+    %header
+      %div.container
+        %div.row
+          %div.twocol
+          %div.eightcol
+            %h1
+              %a{:href=>'', :title=>'Catalogue of UTF-8 characters'} Unicycle
+            
+            %form#search{:method => :get}
+              %label{:for => 'term'}
+              %input#term{:type => 'text', :name => 'term', :value => @term}
+              %input{:type => 'submit', :value => 'Search', :class => 'submit'}
+              
+            %a{:href=>'', :class=>'settings'} Settings
+
+            //%h3 TODO - add pagination by looking at the returned pagination object in the json
+          %div.twocol.last
+            
+    %div.container
+      %div.row
+        %div.twocol
+        %div.eightcol
           
-      %navigation
-        %ul
-        
-      #content        
-        = yield
-        
-    %footer
+          %ul#chars
+          = yield
+          
+          %footer
+            %script{:src=> 'js/webapp.js'}   
+        %div.twocol.last
