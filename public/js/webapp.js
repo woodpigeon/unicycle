@@ -39,3 +39,19 @@ $(function() {
 		getData($("#term").val());
 	})
 });
+
+$(function(){
+	// Lightbox
+	// Hide lightbox
+	$('.lightboxContainer').hide();
+	// Open lightbox
+	$('.activateLightbox').live('click', function (e) {
+        $('.lightboxContainer').fadeIn( 400 );
+        e.preventDefault();
+    });
+    // Close lightbox
+	$('.closeLightbox, .lightboxContainer').live('click', function (e) {
+        $('.lightboxContainer').fadeOut( 400 );
+        e.preventDefault();
+    });
+});

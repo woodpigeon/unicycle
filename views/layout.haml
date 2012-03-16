@@ -22,19 +22,43 @@
               %input#term{:type => 'text', :name => 'term', :value => @term}
               %input{:type => 'submit', :value => 'Search', :class => 'submit'}
               
-            %a{:href=>'', :class=>'settings'} Settings
+            %a{:href=>'', :class=>'settings activateLightbox'} Settings
 
             //%h3 TODO - add pagination by looking at the returned pagination object in the json
           %div.twocol.last
+       
+    %section     
+      %div.container
+        %div.row
+          %div.twocol
+          %div.eightcol
+          
+            %ul#chars
+            = yield
             
-    %div.container
-      %div.row
-        %div.twocol
-        %div.eightcol
-          
-          %ul#chars
-          = yield
-          
-          %footer
-            %script{:src=> 'js/webapp.js'}   
-        %div.twocol.last
+          %div.twocol.last  
+        
+    %footer     
+      %div.container
+        %div.row
+          %div.twocol
+          %div.eightcol
+            
+            // Pagination
+            
+          %div.twocol.last
+        
+    %script{:src=> 'js/webapp.js'}
+    
+    %section     
+      %div.container
+        %div.row
+          %div.twocol
+          %div.eightcol
+            %div.lightboxContainer
+              %div.lightbox
+                %div.lightboxContent
+                  %p Unicycle
+                %a{:href=>'', :class=>'button closeLightbox'} &#735;
+              
+          %div.twocol.last     
