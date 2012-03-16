@@ -87,11 +87,6 @@ ul#chars li:first-child {
 ul#chars li:last-child {
 	border-bottom: none;
 }
-/*
-ul#chars li:nth-child(even) {
-	background-color: #f8f5f2;
-}
-*/
 ul#chars li:hover {
 	background-color: #f5f2ef;
 }
@@ -128,7 +123,7 @@ ul#chars li .description {
 	font-family: "Adobe Garamond Pro", Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif;
 	font-size: 2.2em;
 	font-weight: 100;
-	left: 4.9em;
+	left: 4.94em;
 	letter-spacing: -0.02em;
 	line-height: 1.15em;	
 	text-transform: lowercase;

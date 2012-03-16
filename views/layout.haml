@@ -1,12 +1,14 @@
-%html{:lang=>'en'}
+<!DOCTYPE html>
+%html{:lang=>'en-GB', :dir=>'ltr'}
   %head
     %title Unicycle
+    %meta{:charset=>'utf-8'}
+    %meta{:name=>'viewport', :content=>'width=device-width, initial-scale=1.0'}
     %script{:src=>'/js/jquery-1.7.1.min.js'}
     %script{:src=>'/js/handlebars.js'}
-    %link{:rel=>'stylesheet', :href=>'/css/styles.css'}
+    %link{:rel=>'stylesheet', :href=>'/css/styles.css', :media=>'all'}
     
-    
-  %body
+  %body{:onload=>'setTimeout(function() { window.scrollTo(0, 1) }, 100)'}
     %header
       %div.container
         %div.row
