@@ -180,3 +180,10 @@ ul#chars li:hover .ref {
 	form input[type=text] {
 		width: 45%;
 	}
+	ul#chars li .description {
+		font-size: 1.4em;
+		left: 7.8em;
+		line-height: 1.7em;
+		top: 4.8em;
+	}
+}	
