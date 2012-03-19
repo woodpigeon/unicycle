@@ -75,12 +75,14 @@ end
 get '/characters.json' do
   @term = params[:term] || ''
   @characters = Character.paginated_search(params, @term)
-  pagination = Pagination.new(:next_page => url_for_page(@characters.next_page, @term), 
+
+  pagination = { :next_page => url_for_page(@characters.next_page, @term), 
                               :previous_page => url_for_page(@characters.previous_page, @term),
                               :current_page =>  url_for_page(@characters.current_page, @term),
+                              :current_page_number => @characters.current_page,
                               :offset => @characters.offset,
                               :total_entries =>  @characters.total_entries,
-                              :total_pages => @characters.total_pages)
+                              :total_pages => @characters.total_pages}
   content_type :json
   {:characters => @characters, :pagination => pagination}.to_json
 

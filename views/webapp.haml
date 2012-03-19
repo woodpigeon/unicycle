@@ -1,4 +1,4 @@
-<script id="chars_template" type="text/x-handlebars-template">
+<script id="character_template" type="text/x-handlebars-template">
 <li>
 <dl>
 <dt class="description">{{description}}</dt>
@@ -7,4 +7,20 @@
 <dd class="ref">{{ref}}</dd>
 </dl>
 </li>
+</script>
+
+
+<script id="pagination_template" type="text/x-handlebars-template">
+
+{{#if has_previous_page}}
+<a id="previous_page" class="previous_page" rel="prev" href="{{previous_page}}">← Previous</a>
+{{else}}
+<span class="previous_page disabled">← Previous</span>
+{{/if}}
+<span>Page {{current_page_number}} of {{total_pages}}</span>
+{{#if has_next_page }}
+<a id="next_page" class="next_page" rel="next" href="{{next_page}}">Next →</a>
+{{else}}
+<span class="next_page disabled">Next →</span>
+{{/if}}
 </script>
