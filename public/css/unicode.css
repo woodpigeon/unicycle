@@ -7,17 +7,39 @@ body {
 	color: #444444;
 	font-family: Helvetica, sans-serif;
 	font-size: 100%;
-	padding: 5em 0 0;
+	padding: 5em 0 3.6em;
 }
-header {
+body.js .noscript {
+	display: none;
+}
+.noscript {
+	background-color: #000000;
+	color: #fff;
+	font-size: 0.85em;
+	left: 0;
+	padding: 0.5em 0;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	z-index: 1000000;
+}
+.noscript span {
+	font-weight: bold;
+}
+body.js header {
 	background-color: rgba(249, 247, 245, 0.8);
 	border-bottom: 1px solid #f5f2ef;
+	display: block;
 	left: 0;
 	padding: 1em 0;
 	position: fixed;
 	right: 0;
 	top: 0;
 	z-index: 10000;
+}
+header {
+	display: none;
 }
 header h1 {
 	background: url(../images/unicycle.png) 0 0 no-repeat;
@@ -34,10 +56,56 @@ footer {
 	border-top: 1px solid #f5f2ef;
 	bottom: 0;
 	left: 0;
-	padding: 1em 0;
+	padding: 0;
 	position: fixed;
 	right: 0;
 	z-index: 10000;
+}
+footer a,
+footer span {
+	font-size: 3em;
+	position: relative;
+}
+footer a span,
+footer span span {
+	left: -999em;
+	position: absolute;
+}
+footer span.total {
+	display: block;
+	font-size: 0.85em;
+	left: 45%;
+	margin: 1.5em 0 0;
+	position: absolute;
+	right: 45%;
+	top: 0;
+	width: 100%;
+}
+footer span.disabled {
+	color: #ccc;
+	padding: 0 0.5em;	
+}
+footer span.next_page.disabled {
+	float: right;	
+}
+footer a {
+	color: #444;
+	margin: 0;
+	padding: 0 0.35em;
+	text-decoration: none;
+}
+footer a:focus {
+	background-color: #444;
+	color: #fff;
+}
+footer a:hover {
+	background-color: #f5f2ef;
+}
+footer a#next_page {
+	float: right;
+}
+footer a#previous_page {
+	float: left;
 }
 form input {
 	font-size: 1.4em;
@@ -164,7 +232,8 @@ ul#chars li:hover .ref {
 }
 /* Lightbox */
 .lightboxContainer {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
 	bottom: -1px;
 	left: 0;
 	position: fixed;
@@ -173,37 +242,50 @@ ul#chars li:hover .ref {
 	z-index: 100000;
 }
 .lightbox {
-	background-color: #000000;
-	bottom: 4em;
-	box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
-	display: block;
-	left: 0;
-	margin: 0 10em;
-	padding: 2em 1em 1em;
-	position: absolute;
-	right: 0;
-	top: 4em;
+	background-color: #f9f7f5;
+	margin: 20% 0 0;
+	padding: 1em 1.5em;
 	z-index: 1;
 }
-.lightboxTitle p {
-	color: #fff;
+.lightbox h2 {
+	background: url(../images/unicycle.png) 0 0 no-repeat;
 	font-size: 1em;
-	margin: 10px 0;
-	text-align: center;
-}
-.lightboxContent {
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	width: 100%;
-}
-.closeLightbox {
-	color: #ffffff;
-	font-size: 3em;
+	height: 18px;
+	margin: 1.1em 0 0.5em;
 	text-decoration: none;
-	left: 0.5em;
-	position: absolute;
-	top: 0.5em;
+	text-indent: -9999em;
+	width: 118px;
+}
+.lightbox h3 {
+	color: #aa005b;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: normal;
+	margin: 0 0 1.4em;
+	padding: 0.5em 0;
+}
+.lightbox p {
+	color: #444444;
+	font-size: 0.85em;
+	font-weight: normal;
+	margin: 0 0 1em;
+}
+.lightbox a {
+	color: #444444;
+}
+.lightbox ul {
+	color: #444444;
+	margin: 0 0 2em;
+}
+.lightbox ul li {
+	list-style-type: none;
+	margin: 0 0 0.5em;
+}
+.lightbox ul li span {
+	font-weight: bold;
+}
+.lightbox ul li a {
+	margin: 0 0 0 0.5em;
 }
 /* ============================= */
 /* ! Layout for smaller screens  */
@@ -212,9 +294,6 @@ ul#chars li:hover .ref {
 	form input[type=text] {
 		width: 43%;
 	}
-	.lightbox {
-		margin: 0 5em;
-	}	
 }
 /* ============================= */
 /* ! Layout for mobile version   */
@@ -243,7 +322,8 @@ ul#chars li:hover .ref {
 		line-height: 1.7em;
 		top: 4.8em;
 	}
-	.lightbox {
-		margin: 0 1em;
+	footer span.total {
+		left: 40%;
+		right: 40%;
 	}	
 }	
