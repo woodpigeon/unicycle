@@ -13,7 +13,7 @@
 <script id="pagination_template" type="text/x-handlebars-template">
 
 {{#if has_previous_page}}
-<a id="previous_page" class="previous_page" rel="prev" href="{{previous_page}}">← Previous</a>
+<a id="previous_page" class="previous_page" rel="prev" href="{{previous_page.to_i}}">← Previous</a>
 {{else}}
 <span class="previous_page disabled">← Previous</span>
 {{/if}}
