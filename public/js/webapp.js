@@ -63,11 +63,11 @@ $(function(){
 	// Lightbox
 	$('.lightboxContainer').hide();
 	$('.activateLightbox').live('click', function (e) {
-        $('.lightboxContainer').fadeIn( 400 );
+        $('.lightboxContainer').fadeIn(400);
         e.preventDefault();
     });    
-	$('.lightboxContainer').live('click', function (e) {
-        $(this).fadeOut( 400 );
+	$('.lightboxClose').live('click', function (e) {
+        $('.lightboxContainer').fadeOut(400);
         e.preventDefault();
     });
 });

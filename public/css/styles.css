@@ -2,5 +2,368 @@
 Unicode styles
 Version: 1.0
 */
-@import "1140.css";
-@import "unicode.css";
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #f9f7f5;
+	color: #444444;
+	font-family: Helvetica, sans-serif;
+	font-size: 100%;
+	padding: 5em 0 3.6em;
+}
+.box {
+	margin: 0 auto;
+	max-width: 745px;
+	min-width: 355px;
+	overflow: hidden;
+	padding: 0 20px;
+	width: 100%;	
+}
+.container {
+	float: left;
+	margin: 0 auto;
+	min-height: 1px;
+	position: relative;
+	width: 100%;	
+}
+img, object, embed {
+	max-width: 100%;
+}
+img {
+	height: auto;
+}
+.js .noscript {
+	display: none;
+}
+.noscript {
+	background-color: #000000;
+	color: #fff;
+	font-size: 0.85em;
+	left: 0;
+	padding: 0.5em 0;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	z-index: 1000000;
+}
+.noscript span {
+	font-weight: bold;
+}
+.js header {
+	background-color: rgba(243, 239, 234, 0.8);
+	border-bottom: 1px solid #f5f2ef;
+	display: block;
+	left: 0;
+	padding: 1em 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 10000;
+}
+header {
+	display: none;
+}
+header h1 {
+	background: url(../images/unicycle.png) 0 0 no-repeat;
+	float: left;
+	font-size: 0.8em;
+	height: 18px;
+	margin: 1.1em 2.9em 0 2.15em;
+	text-decoration: none;
+	text-indent: -9999em;
+	width: 118px;
+}
+footer {
+	background-color: rgba(243, 239, 234, 0.8);
+	border-top: 1px solid #f5f2ef;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	position: fixed;
+	right: 0;
+	z-index: 10000;
+}
+#pagination a,
+#pagination span {
+	font-size: 3em;
+	position: relative;
+}
+#pagination a span,
+#pagination span span {
+	left: -999em;
+	position: absolute;
+}
+#pagination span.total {
+	display: block;
+	font-size: 0.85em;
+	left: 45%;
+	margin: 1.5em 0 0;
+	position: absolute;
+	right: 45%;
+	top: 0;
+	width: 100%;
+}
+#pagination span.disabled {
+	color: #ccc;
+	padding: 0 0.5em;	
+}
+#pagination span.next_page.disabled {
+	float: right;	
+}
+#pagination a {
+	color: #444;
+	margin: 0;
+	padding: 0 0.5em;
+	text-decoration: none;
+}
+#pagination a:focus {
+	background-color: #444;
+	color: #fff;
+}
+#pagination a:hover {
+	background-color: #f5f2ef;
+}
+#pagination a#next_page {
+	float: right;
+}
+#pagination a#previous_page {
+	float: left;
+}
+form input {
+	font-size: 1.4em;
+}
+form input[type=text] {
+	border: 1px solid #ccc;
+	color: #333333;
+	font-family: Futura, "Century Gothic", "Apple Gothic", sans-serif;	
+	outline: none;
+	padding: 0.4em;	
+}
+form input[type=submit] {
+	background-color: #aa005b;
+	border: none;
+	font-family: Futura, "Century Gothic", "Apple Gothic", sans-serif;
+	color: #ffffff;
+	display: none;
+	padding: 0.3em 0.4em;
+}
+.settings {
+	background: url(../images/icon-settings.png) 0 0 no-repeat;
+	color: #246be2;
+	display: block;
+	height: 37px;
+	opacity: 0.1;
+	position: absolute;
+	right: 1.7em;
+	text-indent: -9999em;
+	-webkit-transition-property: opacity, -webkit-transform;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;	
+	-webkit-transition-duration: 0.5s, 1s;
+	-moz-transition-duration: 0.5;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;	
+	top: 0.35em;
+	width: 38px;
+}
+.settings:hover {
+	opacity: 0.8;
+	-webkit-transform: rotate(180deg);
+}
+ul#chars li {
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #f2eee9;	
+	display: block;
+	height: 7em;
+	margin: 0;
+	overflow: hidden;
+	padding: 1em 1em 8em;
+	position: relative;
+}
+ul#chars li:first-child {
+	border-top: none;
+}
+ul#chars li:last-child {
+	border-bottom: none;
+}
+ul#chars li:hover {
+	background-color: #f5f2ef;
+}
+ul#chars li dl {
+	position: relative;
+}
+ul#chars li dl dt,
+ul#chars li dl dd {
+	position: absolute;
+}
+ul#chars li .id {
+	bottom: 0.55em;
+	color: #f5dec7;
+	font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+	font-size: 1.2em;
+	text-align: center;
+	width: 140px;
+	z-index: 1;
+}
+ul#chars li .code {
+	background: url(../images/unicode-block.png) 0 0 no-repeat;
+	font-family: "Adobe Garamond Pro", Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif;
+	font-weight: 100;
+	font-size: 7.5em;
+	left: 0;
+	min-height: 0.6em;
+	padding: 0.25em 0 1em;
+	text-align: center;
+	top: 0;
+	width: 140px;
+}
+ul#chars li .description {
+	color: #666666;
+	font-family: "Adobe Garamond Pro", Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif;
+	font-size: 2.2em;
+	font-weight: 100;
+	left: 4.94em;
+	letter-spacing: -0.02em;
+	line-height: 1.15em;	
+	text-transform: lowercase;
+	top: 2.9em;
+}
+ul#chars li .hex {
+	color: #444444;
+	font-family: "Adobe Garamond Pro", Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif;
+	font-size: 1.2em;
+	font-weight: 600;
+	left: 8.85em;
+	padding: 0.25em;
+	top: 0.2em;
+}
+ul#chars li .ref {
+	color: #aa005b;
+	font-family: Futura, "Century Gothic", "Apple Gothic", sans-serif;
+	font-size: 1.8em;
+	font-weight: 100;
+	left: 5.8em;
+	letter-spacing: -0.034em;
+	padding: 0 0.2em;	
+	top: 2.1em;
+}
+ul#chars li:hover .ref {
+	background-color: #aa005b;
+	color: #ffffff;
+}
+/* Lightbox */
+.lightboxContainer {
+	background-color: rgba(0, 0, 0, 0.8);
+	bottom: -1px;	
+	color: #fff;
+	display: block;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100000;
+}
+.lightbox {
+	background-color: #f9f7f5;
+	margin: 28%;
+	padding: 1em 1.5em;
+	position: relative;
+}
+.lightbox h2 {
+	background: url(../images/unicycle.png) 0 0 no-repeat;
+	font-size: 1em;
+	height: 18px;
+	margin: 1.1em 0 0.5em;
+	text-decoration: none;
+	text-indent: -9999em;
+	width: 118px;
+}
+.lightbox h3 {
+	color: #aa005b;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.4em;
+	margin: 0 0 1em;
+	padding: 0.5em 0;
+}
+.lightbox p {
+	color: #444444;
+	font-size: 0.85em;
+	font-weight: normal;
+	line-height: 1.4em;
+	margin: 0 0 1em;
+}
+.lightbox a {
+	color: #444444;
+}
+.lightbox .lightboxClose {
+	background-color: #444444;
+	color: #fff;
+	font-size: 0.85em;
+	font-weight: bold;
+	left: -15px;
+	padding: 0.5em 0.75em;
+	position: absolute;
+	text-decoration: none;
+	top: -15px;
+}
+.lightbox .lightboxClose:hover,
+.lightbox .lightboxClose:active {
+	background-color: #000000;
+}
+/* ============================= */
+/* ! Layout for smaller screens  */
+/* ============================= */
+@media only screen and (max-width: 1023px) {
+	form input[type=text] {
+		width: 43%;
+	}
+}
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+@media handheld, only screen and (max-width: 767px) {
+	.container {
+		width: 90%;	
+	}
+	header h1 {
+		background: url(../images/unicycle-sml.png) 0 0 no-repeat;
+		float: left;
+		font-size: 0.8em;
+		height: 36px;
+		margin: 0.5em 1.5em 0 0;
+		text-decoration: none;
+		text-indent: -9999em;
+		width: 63px;
+	}
+	form input[type=text] {
+		margin-top: 0.1em;
+		width: 40%;
+	}
+	.settings {
+		right: 2.2em;
+	}
+	ul#chars li {
+		padding: 1em 0 8em;
+	}
+	ul#chars li .description {
+		font-size: 1.4em;
+		left: 7.8em;
+		line-height: 1.7em;
+		top: 4.8em;
+	}
+	footer span.total {
+		left: 40%;
+		right: 40%;
+	}
+	.lightbox {
+		margin: 25% 5%;
+	}
+}

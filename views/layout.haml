@@ -10,77 +10,48 @@
     
   %body{:onload=>'setTimeout(function() { window.scrollTo(0, 1) }, 100)'}
     %header
-      %div.container
-        %div.row
-          %div.twocol
-          %div.eightcol
-            %h1
-              %a{:href=>'', :title=>'Catalogue of UTF-8 characters'} Unicycle
-            
-            %form#search{:method => :get}
-              %label{:for => 'term'}
-              %input#term{:type => 'text', :name => 'term', :value => @term}
-              %input{:type => 'submit', :value => 'Search', :class => 'submit'}
-              
-            %a{:href=>'/info', :class=>'settings activateLightbox'} Settings
-
-          %div.twocol.last
-       
-    %section     
-      %div.container
-        %div.row
-          %div.twocol
-          %div.eightcol
-            
-            %ul#chars
-            = yield
-            
-          %div.twocol.last  
-        
-    %footer     
-      %div.container
-        %div.row
-          %div.twocol
-          %div.eightcol
-            
-            #pagination
-            
-          %div.twocol.last
+      %div.box
+        %div.container
+          %h1{:title=>'Unicycle is a catalogue of UTF-8 characters'} Unicycle
+	            
+          %form#search{:method => :get}
+            %label{:for => 'term'}
+            %input#term{:type => 'text', :name => 'term', :value => @term}
+            %input{:type => 'submit', :value => 'Search', :class => 'submit'}
+	              
+          %a{:href=>'/info', :class=>'settings activateLightbox'} Settings
+	       
+    %section
+      %div.box
+        %div.container
+          %ul#chars
+          = yield
           
-    %div.noscript
-      %div.container
-        %div.row
-          %div.twocol
-          %div.eightcol
-            %p
-              %span JavaScript is not active.
-              It'll need to be active so you can interact with Unicycle's content.
-          
-          %div.twocol.last
-          
+    %footer
+      %div.box    
+        %div.container
+          #pagination
+	          
+    %aside.noscript
+      %div.box
+        %div.container
+          %p
+            %span JavaScript is not active.
+            It'll need to be active so you can interact with Unicycle's content.
+	                   
     %div.lightboxContainer
-      %div.container
-        %div.row
-          %div.twocol
-          %div.eightcol
-            %div.lightbox
-              %h2 unicycle
-              %h3 unicycle is unicode &#8211; nothing more, nothing less
-              %ul
-                %li
-                  %span
-                    Thanks go to
-                %li  
-                  %a{:href=>'http://woodpigeon.com/'} Woodpigeon
-                %li
-                  %a{:href=>'http://rubyonrails.org/'} Ruby on Rails
-                %li
-                  %a{:href=>'http://cssgrid.net/'} 1140px CSS Grid System
-              %p
-                &#169; MTMM &#8211;
-                %a{:href=>'http://robsalter.co.uk'} Mind That Mind Mind
-                has scratched another itch.  
-          
-          %div.twocol.last
-        
+      %div.box
+        %div.container
+          %div.lightbox
+            %h2 unicycle
+            %h3 unicycle is unicode &#8211; nothing more, nothing less
+            %p
+              &#169; MTMM &#8211;
+              %a{:href=>'http://robsalter.co.uk'} Mind That Mind Mind
+              has scratched another itch.
+              Thanks to
+              %a{:href=>'http://woodpigeon.com'} woodpigeon
+              for code help and hosting.
+            %a{:href=>'', :class=>'lightboxClose'} Close
+	      
     %script{:src=> 'js/webapp.js'}
