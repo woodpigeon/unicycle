@@ -11,16 +11,15 @@
 
 
 <script id="pagination_template" type="text/x-handlebars-template">
-
 {{#if has_previous_page}}
-<a id="previous_page" class="previous_page" rel="prev" href="{{previous_page.to_i}}">← Previous</a>
+<a id="previous_page" class="previous_page" rel="prev" href="{{previous_page.to_i}}">← <span>Previous</span></a>
 {{else}}
-<span class="previous_page disabled">← Previous</span>
+<span class="previous_page disabled">← <span>Previous</span></span>
 {{/if}}
-<span>Page {{current_page_number}} of {{total_pages}}</span>
+<span class="total">Page {{current_page_number}} of {{total_pages}}</span>
 {{#if has_next_page }}
-<a id="next_page" class="next_page" rel="next" href="{{next_page}}">Next →</a>
+<a id="next_page" class="next_page" rel="next" href="{{next_page}}"><span>Next</span> →</a>
 {{else}}
-<span class="next_page disabled">Next →</span>
+<span class="next_page disabled"><span>Next</span> →</span>
 {{/if}}
 </script>

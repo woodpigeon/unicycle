@@ -22,9 +22,8 @@
               %input#term{:type => 'text', :name => 'term', :value => @term}
               %input{:type => 'submit', :value => 'Search', :class => 'submit'}
               
-            %a{:href=>'', :class=>'settings activateLightbox'} Settings
+            %a{:href=>'/info', :class=>'settings activateLightbox'} Settings
 
-            //%h3 TODO - add pagination by looking at the returned pagination object in the json
           %div.twocol.last
        
     %section     
@@ -32,8 +31,6 @@
         %div.row
           %div.twocol
           %div.eightcol
-          
-            #pagination
             
             %ul#chars
             = yield
@@ -46,21 +43,44 @@
           %div.twocol
           %div.eightcol
             
-            // Pagination
+            #pagination
             
           %div.twocol.last
-        
-    %script{:src=> 'js/webapp.js'}
-    
-    %section     
+          
+    %div.noscript
       %div.container
         %div.row
           %div.twocol
           %div.eightcol
-            %div.lightboxContainer
-              %div.lightbox
-                %div.lightboxContent
-                  %p Unicycle
-                %a{:href=>'', :class=>'button closeLightbox'} &#735;
-              
-          %div.twocol.last     
+            %p
+              %span JavaScript is not active.
+              It'll need to be active so you can interact with Unicycle's content.
+          
+          %div.twocol.last
+          
+    %div.lightboxContainer
+      %div.container
+        %div.row
+          %div.twocol
+          %div.eightcol
+            %div.lightbox
+              %h2 unicycle
+              %h3 unicycle is unicode &#8211; nothing more, nothing less
+              %ul
+                %li
+                  %span
+                    Thanks go to
+                %li  
+                  %a{:href=>'http://woodpigeon.com/'} Woodpigeon
+                %li
+                  %a{:href=>'http://rubyonrails.org/'} Ruby on Rails
+                %li
+                  %a{:href=>'http://cssgrid.net/'} 1140px CSS Grid System
+              %p
+                &#169; MTMM &#8211;
+                %a{:href=>'http://robsalter.co.uk'} Mind That Mind Mind
+                has scratched another itch.  
+          
+          %div.twocol.last
+        
+    %script{:src=> 'js/webapp.js'}
