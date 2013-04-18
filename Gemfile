@@ -1,4 +1,4 @@
-source :gemcutter
+source :rubygems
 
 gem 'active_attr'
 gem 'rake'
@@ -12,7 +12,7 @@ gem 'json'
 gem 'dm-mysql-adapter'
 gem 'dm-sqlite-adapter'
 gem 'brightbox'
-gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'sqlite3'
 
 group :production do
     gem "pg"
