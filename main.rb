@@ -10,7 +10,7 @@ require 'haml'
 require 'active_attr'
 
 # Sqlite data source using the DataMapper ORM
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:unicodes.db") # 'mysql://localhost/unicodes'
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:unicodes.db") 
 
 
 # A model representing a unicode character, maps to a characters table in the database
