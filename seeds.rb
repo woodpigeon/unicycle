@@ -3,6 +3,8 @@ require './main.rb'
 class Seeder
 
   def self.seed
+    return 'Already seeded' if Character.count > 0
+
     Character.create(:code=>" ", :hex=>"U+0020", :ref=>"&amp;#32;", :description=>"SPACE")
     Character.create(:code=>"!", :hex=>"U+0021", :ref=>"&amp;#33;", :description=>"EXCLAMATION MARK")
     Character.create(:code=>"\"", :hex=>"U+0022", :ref=>"&amp;#34;", :description=>"QUOTATION MARK")

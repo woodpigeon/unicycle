@@ -1,0 +1,8 @@
+AllCops:
+  Exclude:
+    - '.bundle/**/*'
+    - 'vendor/**/*'
+    - '*.sql'
+    - '*.db'
+Style/Documentation:
+  Enabled: false
