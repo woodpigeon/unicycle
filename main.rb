@@ -87,9 +87,9 @@ end
 #         },
 #         "total_pages": 565,
 #         "previous_page": "",
-#         "next_page": "http://unicycle.woodpigeon.com/characters.json?page=2&term=",
+#         "next_page": "http://unicycle.herokuapp.com/characters.json?page=2&term=",
 #         "offset": 0,
-#         "current_page": "http://unicycle.woodpigeon.com/characters.json?page=1&term="
+#         "current_page": "http://unicycle.herokuapp.com/characters.json?page=1&term="
 #     }
 # }
 get '/characters.json' do

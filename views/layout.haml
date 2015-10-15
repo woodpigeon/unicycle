@@ -7,38 +7,38 @@
     %script{:src=>'/js/jquery-1.7.1.min.js'}
     %script{:src=>'/js/handlebars.js'}
     %link{:rel=>'stylesheet', :href=>'/css/styles.css', :media=>'all'}
-    
+
   %body{:onload=>'setTimeout(function() { window.scrollTo(0, 1) }, 100)'}
     %header
       %div.box
         %div.container
           %h1{:title=>'Unicycle is a catalogue of UTF-8 characters'} Unicycle
-	            
+
           %form#search{:method => :get}
             %label{:for => 'term'}
             %input#term{:type => 'text', :name => 'term', :value => @term}
             %input{:type => 'submit', :value => 'Search', :class => 'submit'}
-	              
+
           %a{:href=>'/info', :class=>'settings activateLightbox'} Settings
-	       
+
     %section
       %div.box
         %div.container
           %ul#chars
           = yield
-          
+
     %footer
-      %div.box    
+      %div.box
         %div.container
           #pagination
-	          
+
     %aside.noscript
       %div.box
         %div.container
           %p
             %span JavaScript is not active.
             It'll need to be active so you can interact with Unicycle's content.
-	                   
+
     %div.lightboxContainer
       %div.box
         %div.container
@@ -53,5 +53,5 @@
               %a{:href=>'http://woodpigeon.com'} woodpigeon
               for code help and hosting.
             %a{:href=>'', :class=>'lightboxClose'} Close
-	      
+
     %script{:src=> 'js/webapp.js'}

@@ -1,10 +1,10 @@
-= will_paginate @characters 
+= will_paginate @characters
 
 %form{:method => :get}
   %label{:for => 'term'}
   %input{:type => 'text', :name => 'term', :value => @term}
   %input{:type => 'submit'}
-  
+
 %p= @character_count
 
 %ul
@@ -15,4 +15,4 @@
         %dd.code= c.code
         %dd.hex= c.hex
         %dd.ref= c.ref
-    
+
