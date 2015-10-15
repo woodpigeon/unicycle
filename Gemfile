@@ -12,7 +12,6 @@ gem 'data_mapper'
 gem 'haml'
 gem 'json'
 gem 'dm-sqlite-adapter'
-gem 'sqlite3'
 
 group :production do
     gem "pg"
@@ -22,4 +21,5 @@ end
 group :development, :test do
     gem 'sqlite3-ruby', :require => 'sqlite3'
     gem 'dm-migrations'
+    gem 'sqlite3'
 end
