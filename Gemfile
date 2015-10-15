@@ -1,4 +1,6 @@
-source :rubygems
+source 'https://rubygems.org'
+
+ruby '2.2.3'
 
 gem 'active_attr'
 gem 'rake'
@@ -10,7 +12,6 @@ gem 'data_mapper'
 gem 'haml'
 gem 'json'
 gem 'dm-sqlite-adapter'
-gem 'brightbox'
 gem 'sqlite3'
 
 group :production do
