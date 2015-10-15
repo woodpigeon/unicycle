@@ -36,13 +36,15 @@ class Character
     page -= 1
     per_page = per_page.to_i
     offset = per_page * page
-    term.upcase!
+    term = term.gsub('#','').upcase
 
     characters = Character.all
 
     # apply search term is there is one
     unless term.empty?
-      characters = characters.all(:description.like => "%#{term}%")
+      characters = characters.all(:description.like => "%#{term}%") |
+                   characters.all(:hex.like => "%#{term}%") |
+                   characters.all(:code.like => "%#{term}%")
     end
 
     # get the current set of characters to display
