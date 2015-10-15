@@ -12,14 +12,15 @@ gem 'data_mapper'
 gem 'haml'
 gem 'json'
 gem 'dm-sqlite-adapter'
+gem 'dm-migrations'
+gem "pg"
+gem "dm-postgres-adapter"
 
-group :production do
-    gem "pg"
-    gem "dm-postgres-adapter"
-end
+# group :production do
+
+# end
 
 group :development, :test do
     gem 'sqlite3-ruby', :require => 'sqlite3'
-    gem 'dm-migrations'
     gem 'sqlite3'
 end
