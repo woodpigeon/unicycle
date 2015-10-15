@@ -11,16 +11,12 @@ gem 'will_paginate'
 gem 'data_mapper'
 gem 'haml'
 gem 'json'
-gem 'dm-sqlite-adapter'
 gem 'dm-migrations'
 gem "pg"
 gem "dm-postgres-adapter"
 
-# group :production do
-
-# end
-
 group :development, :test do
-    gem 'sqlite3-ruby', :require => 'sqlite3'
-    gem 'sqlite3'
+  gem 'dm-sqlite-adapter'
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'sqlite3'
 end
