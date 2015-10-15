@@ -1,0 +1,12 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+      "excluded_folder_pattern": [
+      "vendor",
+      ".bundle",
+      ]
+		}
+	]
+}
